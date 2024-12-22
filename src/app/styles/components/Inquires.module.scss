@@ -1,0 +1,75 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/colors.scss";
+
+.generalContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6.25rem;
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem;
+}
+
+.textArea {
+}
+
+.title {
+  color: var(--Absolute-White, #fff);
+  font-family: Urbanist;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 4.5rem */
+}
+
+.textInformation {
+  color: var(--Grey-60, #999);
+  font-family: Urbanist;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.6875rem */
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  gap: 1.88rem; /* Espaciado entre los elementos */
+}
+
+.formGroup {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* Tamaño dinámico según el gridSize */
+.gridSize1 {
+  grid-column: span 1; /* Ocupa 1 columna */
+}
+
+.gridSize2 {
+  grid-column: span 2; /* Ocupa 2 columnas */
+}
+
+.input,
+.textarea {
+  border-radius: 0.5rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+  display: flex;
+  padding: 1.5rem 1.25rem;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: stretch;
+  resize: none;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}

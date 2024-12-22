@@ -1,0 +1,114 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.generalLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  margin-top: 5rem;
+}
+
+.noteContainer {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.75rem;
+  border: 1px solid colors.$gray-15;
+  background: colors.$gray-10;
+  display: flex;
+  padding: 1.875rem 3.125rem;
+  align-items: center;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+
+.noteTitle {
+  font: fonts.$span-strong;
+}
+
+.parragraph {
+  color: colors.$gray-60;
+  font-family: Urbanist;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.6875rem */
+}
+
+.priceDetail {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.left {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font: fonts.$h2-font;
+  font-weight: 600;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.88rem;
+}
+
+.right {
+  border-radius: 0.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  display: flex;
+  padding: 3.125rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  align-self: stretch;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.addiontalFeesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.label {
+  color: colors.$gray-60;
+  font: fonts.$span-font;
+}
+
+.feePrice {
+  font: fonts.$span-strong;
+}
+
+.noteInformation {
+  border-radius: 1.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+  display: flex;
+  width: 100%;
+  padding: 0.5rem 0.875rem;
+  align-items: flex-start;
+  gap: 0.25rem;
+  color: var(--Grey-60, #999);
+  font-family: Urbanist;
+  font-size: 0.925rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.6875rem */
+}
+
+.title {
+  border-bottom: 1px solid #262626;
+  width: 100%;
+  padding-bottom: 2rem;
+}
