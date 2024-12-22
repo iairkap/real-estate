@@ -1,0 +1,43 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 10.125rem;
+  width: 100%;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 12.5rem;
+  align-items: flex-end;
+}
+
+.h2 {
+  font: fonts.$h2-font;
+}
+.span {
+  font: fonts.$span-font;
+}
+.opacity {
+  opacity: 0.5;
+  scale: 0.5;
+}
+
+.opacityb {
+  opacity: 0.2;
+  scale: 0.2;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.88rem;
+}

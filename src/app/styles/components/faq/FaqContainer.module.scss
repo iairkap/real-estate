@@ -1,0 +1,32 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.88rem;
+  margin-top: 5rem;
+}
+
+.card {
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid colors.$gray-15;
+  background: colors.$gray-08;
+  padding: 3.125rem;
+  flex: 1 0 0;
+  justify-content: space-between;
+}
+
+.title {
+  font: fonts.$span-strong;
+}
+
+.buttonContainer {
+  max-width: 5.38rem;
+}

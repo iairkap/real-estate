@@ -1,0 +1,60 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 10.125rem;
+  margin-top: 5rem;
+  gap: 5rem;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+}
+.opacity {
+  opacity: 0.5;
+  scale: 0.5;
+}
+
+.opacityb {
+  opacity: 0.2;
+  scale: 0.2;
+}
+
+.h3 {
+  font: fonts.$h2-font;
+}
+
+.text {
+  font: fonts.$span-font;
+  color: colors.$gray-60;
+  line-height: 150%;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+
+  .card {
+    display: flex;
+    padding: 3.125rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.875rem;
+    flex: 1 0 0;
+    border-radius: 0.75rem;
+    border: 1px solid var(--Grey-15, #262626);
+    background: var(--Grey-08, #141414);
+    box-shadow: 0px 0px 0px 8px #191919;
+    h3 {
+      font: fonts.$h3-font;
+    }
+    p {
+      font: fonts.$span-font;
+      color: colors.$gray-60;
+      line-height: 150%;
+    }
+  }
+}

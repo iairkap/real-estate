@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+$primary-font: "Urbanist", serif;
+$button-font: 500 1.125rem #{$primary-font};
+
+@font-face {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 100 1000;
+  src: url("../fonts/Urbanist[wght].woff") format("woff");
+}
+
+$h1-font: 600 3.75rem/1.1 $primary-font;
+
+$h2-font: 700 2.5rem/1.5 $primary-font;
+
+$span-font: 500 1.125rem #{$primary-font};
+
+$span-strong: 600 1.5rem #{$primary-font};
+
+$h3-font: 600 1.875rem/1.5 $primary-font;
+$h3-secondary: 600 1.625rem/1.5 $primary-font;

@@ -1,0 +1,295 @@
+{
+  "version": {
+    "version": "1.0.2",
+    "stored_at": "2024-04-01T00:35:24.725Z"
+  },
+  "properties_types": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Apartment"
+    },
+    {
+      "id": 4,
+      "name": "Office"
+    },
+    {
+      "id": 5,
+      "name": "Land"
+    }
+  ],
+
+  "properties_status": [
+    {
+      "id": 1,
+      "name": "Available"
+    },
+    {
+      "id": 2,
+      "name": "Rented"
+    },
+    {
+      "id": 3,
+      "name": "Sold"
+    }
+  ],
+
+  "properties": [
+    {
+      "id": 1,
+      "name": "Seaside Serenity Villa",
+      "description": "Discover your own piece of paradise with the Seaside Serenity Villa. T With an open floor plan, breathtaking ocean views from every room, and direct access to a pristine sandy beach, this property is the epitome of coastal living.",
+      "location": "Atlanta, GA",
+      "status": 1,
+      "type": 1,
+      "price": 125000,
+      "area": 2500,
+      "bathrooms": 3,
+      "bedrooms": 4,
+      "garage": 2,
+      "key_features": [
+        "Expansive oceanfront terrace for outdoor entertaining",
+        "Private pool and spa",
+        "Gourmet kitchen with top-of-the-line appliances",
+        "Private beach access for morning strolls and sunset views"
+      ],
+      "images": ["/villa.png"],
+      "fees": {
+        "transfer_tax": 25000,
+        "legal_fees": 5000,
+        "property_insurance": 1200,
+        "home_inspection": 500
+      }
+    },
+    {
+      "id": 2,
+      "name": "Metropolitan Haven",
+      "description": "Experience the best of city living with the Metropolitan Haven. This modern apartment is located in the heart of the city, with easy access to shopping, dining, and entertainment. With floor-to-ceiling windows, a spacious open floor plan, and luxury finishes throughout, this property is perfect for urban professionals and families alike.",
+      "location": "New York, NY",
+      "status": 1,
+      "type": 3,
+      "price": 75000,
+      "area": 1800,
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "garage": 1,
+      "key_features": [
+        "Spacious open floor plan",
+        "Luxurious finishes throughout",
+        "Floor-to-ceiling windows",
+        "Easy access to shopping, dining, and entertainment"
+      ],
+      "images": ["/metropolitan.png"],
+      "fees": {
+        "transfer_tax": 25000,
+        "legal_fees": 5000,
+        "property_insurance": 1200,
+        "home_inspection": 500
+      }
+    },
+    {
+      "id": 3,
+      "name": "Rustic Retreat Cottage",
+      "description": "Escape to the countryside with the Rustic Retreat Cottage. This charming property is nestled in a peaceful rural setting, surrounded by lush gardens and rolling hills. With a cozy interior, wood-burning fireplace, and outdoor deck for al fresco dining, this property is the perfect weekend getaway or full-time residence.",
+      "location": "Nashville, TN",
+      "status": 1,
+      "type": 2,
+      "price": 50000,
+      "area": 1500,
+      "bathrooms": 1,
+      "bedrooms": 2,
+      "garage": 0,
+      "key_features": [
+        "Cozy interior with wood-burning fireplace",
+        "Outdoor deck for al fresco dining",
+        "Luxurious finishes throughout",
+        "Spacious open floor plan"
+      ],
+      "images": ["/rustic.png"],
+      "fees": {
+        "transfer_tax": 25000,
+        "legal_fees": 5000,
+        "property_insurance": 1200,
+        "home_inspection": 500
+      }
+    },
+    {
+      "id": 4,
+      "name": "Iair Kaplun House",
+      "description": "Discover your own piece of paradise with the Seaside Serenity Villa. T With an open floor plan, breathtaking ocean views from every room, and direct access to a pristine sandy beach, this property is the epitome of coastal living.",
+      "location": "Atlanta, GA",
+      "status": 1,
+      "type": 1,
+      "price": 1250000,
+      "area": 2500,
+      "bathrooms": 3,
+      "bedrooms": 4,
+      "garage": 2,
+      "key_features": [
+        "Expansive oceanfront terrace for outdoor entertaining",
+        "Private pool and spa",
+        "Gourmet kitchen with top-of-the-line appliances",
+        "Private beach access for morning strolls and sunset views"
+      ],
+      "images": ["/villa.png"],
+      "fees": {
+        "transfer_tax": 25000,
+        "legal_fees": 5000,
+        "property_insurance": 1200,
+        "home_inspection": 500
+      }
+    },
+    {
+      "id": 5,
+      "name": "Metropolitan Haven",
+      "description": "Experience the best of city living with the Metropolitan Haven. This modern apartment is located in the heart of the city, with easy access to shopping, dining, and entertainment. With floor-to-ceiling windows, a spacious open floor plan, and luxury finishes throughout, this property is perfect for urban professionals and families alike.",
+      "location": "New York, NY",
+      "status": 1,
+      "type": 3,
+      "price": 750000,
+      "area": 1800,
+      "bathrooms": 2,
+      "bedrooms": 3,
+      "garage": 1,
+      "key_features": [
+        "Spacious open floor plan",
+        "Luxurious finishes throughout",
+        "Floor-to-ceiling windows",
+        "Easy access to shopping, dining, and entertainment"
+      ],
+      "images": ["/metropolitan.png"],
+      "fees": {
+        "transfer_tax": 25000,
+        "legal_fees": 5000,
+        "property_insurance": 1200,
+        "home_inspection": 500
+      }
+    },
+    {
+      "id": 6,
+      "name": "Rustic Retreat Cottage",
+      "description": "Escape to the countryside with the Rustic Retreat Cottage. This charming property is nestled in a peaceful rural setting, surrounded by lush gardens and rolling hills. With a cozy interior, wood-burning fireplace, and outdoor deck for al fresco dining, this property is the perfect weekend getaway or full-time residence.",
+      "status": 1,
+      "location": "Nashville, TN",
+      "type": 2,
+      "price": 500000,
+      "area": 1500,
+      "bathrooms": 1,
+      "bedrooms": 2,
+      "garage": 0,
+      "key_features": [
+        "Cozy interior with wood-burning fireplace",
+        "Outdoor deck for al fresco dining",
+        "Luxurious finishes throughout",
+        "Spacious open floor plan"
+      ],
+      "images": ["/rustic.png"],
+      "fees": {
+        "transfer_tax": 25000,
+        "legal_fees": 5000,
+        "property_insurance": 1200,
+        "home_inspection": 500
+      }
+    }
+  ],
+
+  "clients_reviews": [
+    {
+      "id": 1,
+      "name": "Wade Warren",
+      "title": "Exceptional Service!",
+      "description": "Our experience with Estatein was outstanding. Their team's dedication and professionalism made finding our dream home a breeze. Highly recommended!",
+      "location": "New York, NY",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "id": 2,
+      "name": "Emelie Thomson",
+      "title": "Efficient and Reliable!",
+      "description": "Estatein provided us with top-notch service. They helped us sell our property quickly and at a great price. We couldn't be happier with the results.",
+      "location": "Los Angeles, CA",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "id": 3,
+      "name": "John Mans",
+      "title": "Trusted Advisors",
+      "description": "The Estatein team guided us through the entire buying process. Their knowledge and commitment to our needs were impressive. Thank you for your support!",
+      "location": "San Francisco, CA",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "id": 4,
+      "name": "Olivia Smith",
+      "title": "Highly Recommend!",
+      "description": "Working with Estatein was seamless and enjoyable. They understood my preferences and found me the perfect property quickly. I'll definitely work with them again.",
+      "location": "Austin, TX",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "id": 5,
+      "name": "Michael Johnson",
+      "title": "Great Communication",
+      "description": "The Estatein team kept me informed at every step of the process. Their transparency and professionalism made selling my house stress-free.",
+      "location": "Miami, FL",
+      "rating": 4,
+      "avatar": ""
+    },
+    {
+      "id": 6,
+      "name": "Sophia Brown",
+      "title": "Excellent Support",
+      "description": "I appreciated the patience and support I received from Estatein. They made the process of buying my first home much less intimidating.",
+      "location": "Seattle, WA",
+      "rating": 4,
+      "avatar": ""
+    },
+    {
+      "id": 7,
+      "name": "Liam Davis",
+      "title": "Professional and Courteous",
+      "description": "Estatein went above and beyond to ensure my needs were met. Their attention to detail and customer care really stood out.",
+      "location": "Chicago, IL",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "id": 8,
+      "name": "Emma Martinez",
+      "title": "Fantastic Experience",
+      "description": "Estatein exceeded my expectations. Their local expertise helped me find a home that matched all my criteria.",
+      "location": "Boston, MA",
+      "rating": 5,
+      "avatar": ""
+    },
+    {
+      "id": 9,
+      "name": "William Taylor",
+      "title": "Responsive and Helpful",
+      "description": "Whenever I had questions, the Estatein team was there with prompt answers. Their responsiveness made the whole process smoother.",
+      "location": "Denver, CO",
+      "rating": 4,
+      "avatar": ""
+    },
+    {
+      "id": 10,
+      "name": "Ava Wilson",
+      "title": "Smooth Process",
+      "description": "From start to finish, Estatein made selling my home simple and hassle-free. I highly recommend their services.",
+      "location": "Atlanta, GA",
+      "rating": 5,
+      "avatar": ""
+    }
+  ]
+}

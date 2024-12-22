@@ -1,0 +1,45 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding: 0rem 10.125rem;
+  margin-top: -4rem;
+}
+
+.searchBarContainer {
+  display: flex;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  align-items: center;
+  gap: 3.125rem;
+  align-self: stretch;
+  border-radius: 0.75rem 0.75rem 0rem 0rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-08, #141414);
+  box-shadow: 0px 0px 0px 10px #191919;
+  width: 75%;
+  align-self: center;
+  input {
+    color: var(--Grey-40, #666);
+    font-family: Urbanist;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 2.25rem */
+    background-color: transparent;
+    width: 100%;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+.selectorsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  background: var(--Grey-10, #1a1a1a);
+  padding: 0.625rem;
+}

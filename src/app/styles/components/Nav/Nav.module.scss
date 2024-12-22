@@ -1,0 +1,46 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  background-color: colors.$gray-10;
+  padding: 1.25rem 10.125rem;
+  border: 1px solid colors.$gray-15;
+  justify-content: space-between;
+  flex: 0 1;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: center;
+  flex: 2;
+}
+
+.contactUs {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.promotion {
+  background: colors.$gray-10;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.125rem 10rem;
+}
+
+.promotionContainer {
+  position: relative;
+  height: 100%;
+}

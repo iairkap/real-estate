@@ -1,0 +1,190 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3.12rem;
+  margin-top: 5rem;
+  padding: 6.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  select {
+    display: flex;
+    padding: 1.375rem 1.25rem;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--Grey-15, #262626);
+    background: var(--Grey-10, #1a1a1a);
+    color: var(--Grey-40, #666);
+    font-family: Urbanist;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem; /* 111.111% */
+  }
+  input {
+    border-radius: 0.5rem;
+    border: 1px solid var(--Grey-15, #262626);
+    background: var(--Grey-10, #1a1a1a);
+    display: flex;
+    padding: 1.5rem 1.25rem;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: stretch;
+    color: var(--Grey-40, #666);
+    font-family: Urbanist;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem; /* 111.111% */
+  }
+  textarea {
+    border-radius: 0.5rem;
+    border: 1px solid var(--Grey-15, #262626);
+    background: var(--Grey-10, #1a1a1a);
+    resize: none;
+    padding: 1rem 1rem;
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // 4 columnas
+  gap: 1rem; // Espaciado entre elementos
+}
+
+.input-field,
+.select-field,
+.textarea-field {
+  border-radius: 0.5rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+  color: var(--Grey-40, #666);
+  padding: 1.5rem 1.25rem;
+  font-family: Urbanist, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.textarea-field {
+  resize: none;
+  background-color: red;
+}
+
+.textareaField {
+  background-color: red;
+}
+.checkbox-field {
+  width: 1rem;
+  height: 1rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Cuatro columnas
+  gap: 1.5rem; // Espaciado entre elementos
+}
+
+/* Estilo base para los campos */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-field,
+.input-field,
+.textarea-field,
+.checkboxLabel {
+  border-radius: 0.5rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+  padding: 1.5rem 1.25rem;
+  font-family: Urbanist, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.field {
+}
+
+.checkboxOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  width: 100%;
+}
+.checkboxLabel {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0; // Ocultamos el radio button original
+    cursor: pointer;
+  }
+
+  .checkboxCircle {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--Grey-15, #262626);
+    border-radius: 50%; // Hacerlo circular
+    background: var(--Grey-10, #1a1a1a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    input[type="radio"]:checked + & {
+      background: var(--Primary, #ff5722); // Cambia este color al que prefieras
+      border-color: var(--Primary, #ff5722);
+    }
+  }
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.textarea-field {
+  resize: none;
+}
+
+.checkbox-field {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Clases dinámicas basadas en gridsize */
+.grid-size-1 {
+  grid-column: span 1;
+}
+.grid-size-2 {
+  grid-column: span 2;
+}
+.grid-size-3 {
+  grid-column: span 3;
+}
+.grid-size-4 {
+  grid-column: span 4;
+}
+
+.submitButton {
+  grid-column: span 4; // Botón ocupa toda la fila
+  padding: 1rem 2rem;
+  background-color: var(--Grey-15, #262626);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,113 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.fixPadding {
+  /*   margin: -2rem -10.125rem;
+ */
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.cardContainerb {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.descriptionMaxChar {
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Límite de 6 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Oculta el contenido que exceda */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos si es necesario */
+  max-width: 100%; /* Opcional: controla el ancho máximo */
+}
+.cardLayout {
+  border-radius: 0.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-08, #141414);
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.875rem;
+  flex: 1 0 0;
+}
+
+.imagenContainer {
+  position: relative;
+  width: 100%;
+  height: 15.5rem;
+  overflow: hidden;
+}
+
+.readMore {
+  color: var(--Absolute-White, #fff);
+  font-family: Urbanist;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+  p {
+    color: var(--Absolute-White, #fff);
+    font-family: Urbanist;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price {
+  font: fonts.$span-strong;
+}
+
+.sub {
+  color: colors.$gray-60;
+  font: fonts.$span-font;
+}

@@ -1,0 +1,68 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.default {
+  background-color: colors.$purple-60;
+  display: flex;
+  padding: 1.125rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.625rem;
+  font: fonts.$button-font;
+  color: colors.$white;
+  text-wrap: nowrap;
+}
+
+.destructive {
+  /* destructive styles */
+}
+
+.outline {
+  /* outline styles */
+}
+
+.secondary {
+  background-color: colors.$black;
+  display: flex;
+  padding: 1.125rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.625rem;
+  font: fonts.$button-font;
+  color: colors.$white;
+  border: 1px solid colors.$gray-15;
+}
+
+.ghost {
+  background-color: transparent;
+  display: flex;
+  padding: 1.125rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.625rem;
+  font: fonts.$button-font;
+  color: colors.$white;
+}
+
+.link {
+  /* link styles */
+}
+
+.default {
+  /* default size styles */
+}
+
+.sm {
+  /* small size styles */
+}
+
+.lg {
+  /* large size styles */
+}
+
+.icon {
+  /* icon size styles */
+}

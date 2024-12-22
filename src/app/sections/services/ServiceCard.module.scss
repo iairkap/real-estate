@@ -1,0 +1,66 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5rem;
+  gap: 1.88rem;
+}
+
+.card {
+  display: flex;
+  padding: 3.125rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.875rem;
+  flex: 1 0 0;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  position: relative;
+}
+.card:last-child {
+  grid-column: span 2;
+}
+
+.backgroundContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.icon {
+  width: 2.125rem;
+  height: 2.125rem;
+  fill: colors.$purple-75;
+}
+
+.spanStrong {
+  font: fonts.$span-strong;
+}
+
+.spanStronger {
+  font: fonts.$h3-font;
+}
+
+.span {
+  font: fonts.$span-font;
+  color: colors.$gray-60;
+}
+.iconContainerSVG {
+  padding: 0.625rem;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 6.25rem;
+  border: 1px solid #a685fa;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}

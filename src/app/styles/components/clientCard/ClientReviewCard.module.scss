@@ -1,0 +1,64 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.88rem;
+  margin-top: 5rem;
+}
+
+.icon {
+  fill: #ffe500;
+  border-radius: 6.25rem;
+  border: 1px solid colors.$gray-15;
+  background: colors.$gray-10;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.headerRating {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid colors.$gray-15;
+  background: colors.$gray-08;
+  padding: 3.125rem;
+  flex: 1 0 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.88rem;
+}
+.title {
+  font: fonts.$span-strong;
+}
+
+.pictureContainer {
+  display: flex;
+  position: relative;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.location {
+  color: colors.$gray-60;
+}

@@ -1,0 +1,78 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.contentLayout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 10.125rem;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+}
+.opacity {
+  opacity: 0.5;
+  scale: 0.5;
+}
+
+.opacityb {
+  opacity: 0.2;
+  scale: 0.2;
+}
+
+.h3 {
+  font: fonts.$h2-font;
+}
+
+.text {
+  font: fonts.$span-font;
+  color: colors.$gray-60;
+  line-height: 150%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.88rem;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-08, #141414);
+  box-shadow: 0px 0px 0px 10px #191919;
+  padding: 3.75rem;
+  gap: 1.875rem;
+}
+
+.icona {
+  border-radius: 50%;
+  width: 2.125rem;
+  height: 2.125rem;
+  fill: colors.$purple-75;
+}
+
+.iconContainerSVG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  border: 1px solid colors.$purple-75;
+}
+
+.spanStrong {
+  font: fonts.$span-strong;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}

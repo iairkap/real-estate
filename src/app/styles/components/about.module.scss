@@ -1,0 +1,44 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Cuatro columnas iguales
+  gap: 1rem; // Espaciado entre los elementos
+  padding: 6.25rem 10.125rem;
+}
+
+.gridItem {
+  position: relative;
+  aspect-ratio: 1 / 1; // Asegura que las imágenes sean cuadradas
+  overflow: hidden;
+  border-radius: 0.5rem; // Bordes redondeados, opcional
+  height: 14.75rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gridItem2 {
+  grid-column: span 2; // Ocupa dos columnas
+}
+
+.gridItem1 {
+  grid-column: span 1; // Ocupa una columna
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-right: 2rem;
+}
+
+.title {
+  font: fonts.$h2-font;
+}
+
+.span {
+  font: fonts.$span-font;
+  color: colors.$gray-60;
+}
