@@ -1,0 +1,76 @@
+@use "@/app/styles/settings/_fonts.scss";
+@use "@/app/styles/settings/_colors.scss";
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.125rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.description,
+.keyFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  padding: 3.125rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--Grey-15, #262626);
+}
+
+.descriptionContainer {
+  border-top: 1px solid var(--Grey-15, #262626);
+  display: flex;
+  padding-top: 1.25rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.iconHeader,
+.descriptionContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  fill: colors.$gray-60;
+  width: fit-content;
+}
+
+.value {
+  font: fonts.$span-strong;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.88rem;
+  h3 {
+    font: fonts.$span-strong;
+  }
+  span {
+    color: colors.$gray-60;
+  }
+}
+
+.key {
+  display: flex;
+  padding: 1.125rem 1.5rem;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  border-left: 1px solid var(--Purple-60, #703bf7);
+  background: linear-gradient(90deg, #1a1a1a 0%, rgba(26, 26, 26, 0) 100%);
+}

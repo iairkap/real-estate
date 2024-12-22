@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   padding: 1.25rem 10.125rem;
+  gap: 3.125rem;
+}
+
+.faqContainer {
+  margin: -1.25rem -10.125rem;
 }
 
 .carrouselContainer {

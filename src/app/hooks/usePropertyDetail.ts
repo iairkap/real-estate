@@ -31,6 +31,7 @@ export const usePropertyDetails = (id: string | undefined) => {
   // Lógica para obtener imágenes desde Unsplash
   useEffect(() => {
     setLoading(true);
+
     if (filteredProperties.length > 0 && filteredProperties[0].location) {
       const searchQuery = `luxury real estate house villa`;
 
@@ -39,7 +40,7 @@ export const usePropertyDetails = (id: string | undefined) => {
           params: {
             query: searchQuery,
             client_id: UNSPLASH_CLIENT_ID,
-            per_page: 12,
+            per_page: 19,
           },
         })
         .then((response) => {
@@ -47,6 +48,12 @@ export const usePropertyDetails = (id: string | undefined) => {
             const imageUrls = response.data.results.map(
               (item: { urls: { regular: string } }) => item.urls.regular
             );
+
+            // Si filteredProperties tiene una imagen[0], la agregamos al principio
+            if (filteredProperties[0]?.images) {
+              imageUrls.unshift(filteredProperties[0].images);
+            }
+
             setPictures(imageUrls);
           } else {
             console.error("No images found for query:", response.data);
@@ -54,13 +61,18 @@ export const usePropertyDetails = (id: string | undefined) => {
         })
         .catch((error) => {
           console.error("Error fetching images:", error);
+        })
+        .finally(() => {
+          // Añade un retraso de 1 segundo antes de desactivar el loading
+          setTimeout(() => {
+            setLoading(false);
+          }, 1000);
         });
+    } else {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
     }
-    /* agregar 5 segundos de retraso */
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
   }, [filteredProperties]);
 
   return { filteredProperties, pictures, loading };

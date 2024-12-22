@@ -24,6 +24,8 @@ export const CLIENTCENTRIC = "/icons/clientcentric.svg#icon";
 export const MESSAGE = "/icons/message.svg#icon";
 
 export const BEDROOMB = "/icons/bedroomb.svg#icon";
+export const BATHROOMB = "/icons/bathroomb.svg#icon";
+export const AREA = "/icons/area.svg#icon";
 
 export const LOCATION = "/icons/location.svg#icon";
 export const MONEY = "/icons/money.svg#icon";
@@ -38,6 +40,8 @@ export const LEGAL = "/icons/legal.svg#icon";
 export const FINANCE = "/icons/finance.svg#icon";
 export const MAINTENANCE = "/icons/maintenance.svg#icon";
 export const TENANT = "/icons/tenant.svg#icon";
+
+export const RAYO = "icons/rayo.svg#icon";
 
 export const PHONE = "/icons/phone.svg#icon";
 export const EMAIL = "/icons/email.svg#icon";

@@ -7,13 +7,14 @@ import { usePropertyDetails } from "@/app/hooks/usePropertyDetail";
 import Loader from "@/app/components/Loader";
 import styles from "@/app/styles/components/property/Layout.module.scss";
 import Header from "@/app/sections/property/Header";
+import Derscription from "@/app/sections/properties/Description";
+import FAQContainer from "@/app/sections/Faq";
+
+
 const PropertiesID: React.FC = () => {
     const pathName = usePathname();
     const id = pathName.split("/").pop();
     const { filteredProperties, pictures, loading } = usePropertyDetails(id);
-    console.log(loading)
-
-
 
     if (loading) {
         return (
@@ -31,8 +32,12 @@ const PropertiesID: React.FC = () => {
                     <article className={styles.carrouselContainer}>
                         <ImageCarousel images={pictures} />
                     </article>
+                    <Derscription filteredProperties={filteredProperties} />
                 </div>
             }
+            <div className={styles.faqContainer}>
+                <FAQContainer />
+            </div>
         </main>
     );
 };
