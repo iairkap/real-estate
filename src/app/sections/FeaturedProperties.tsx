@@ -43,6 +43,7 @@ const FeaturedProperties: React.FC<FeaturedPropertiesProps> = () => {
                     return (
                         <PropertyCard
                             key={index}
+                            id={property.id}
                             title={property.name}
                             images={property.images[0]}
                             description={property.description}

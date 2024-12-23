@@ -4,7 +4,9 @@ import Image from 'next/image';
 import { iconByType } from '@/app/constants/constants';
 import { BATHROOM, BEDROOM } from "@/lib/image";
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 interface PropertyCardProps {
+    id: number;
     title: string;
     description: string;
     type: string;
@@ -15,7 +17,7 @@ interface PropertyCardProps {
     showChips: boolean;
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({ title, description, type, bedroom, price, bathroom, images, showChips = true }) => {
+const PropertyCard: React.FC<PropertyCardProps> = ({ id, title, description, type, bedroom, price, bathroom, images, showChips = true }) => {
     const truncateText = (text: string, maxLength: number) => {
         return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
     };
@@ -61,7 +63,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ title, description, type, b
                     <span className={styles.sub}>Price: </span>
                     <span className={styles.price}>${price}</span>
                 </div>
-                <Button variant='default' size='sm'>View Property Details</Button>
+                <Link href={`/properties/${id}`}>
+                    <Button variant='default' size='sm'>View Property Details</Button>
+                </Link>
             </div>
         </div>
     );

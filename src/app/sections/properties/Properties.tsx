@@ -47,6 +47,7 @@ const Properties: React.FC = () => {
                         const propertyType = propertiesTypes.find(pt => pt.id === property.type)?.name || "Unknown";
                         return (
                             <PropertyCard
+                                id={property.id}
                                 key={index}
                                 title={property.name}
                                 images={property.images[0]}
