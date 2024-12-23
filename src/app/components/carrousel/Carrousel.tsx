@@ -18,7 +18,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
     const [emblaRef, emblaApi] = useEmblaCarousel()
 
     React.useEffect(() => {
-        if (emblaApi) {
+        if (emblaApi && emblaApi.scrollTo) {
             emblaApi.scrollTo(currentIndex)
         }
     }, [currentIndex, emblaApi])
@@ -36,7 +36,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
     }, [currentIndex])
 
     return (
-        <div className="w-full mx-auto space-y-4">
+        <div className="w-full mx-auto space-y-4" ref={emblaRef}>
             {/* Main Images Display */}
             <div className={isMobile ? "space-y-4" : "grid grid-cols-2 gap-4"}>
                 {images.slice(currentIndex, currentIndex + (isMobile ? 1 : 2)).map((image, index) => (

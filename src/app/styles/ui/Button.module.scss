@@ -31,14 +31,6 @@
   }
 }
 
-.destructive {
-  /* destructive styles */
-}
-
-.outline {
-  /* outline styles */
-}
-
 .secondary {
   background-color: transparent;
   display: flex;
@@ -62,24 +54,4 @@
   border-radius: 0.625rem;
   font: fonts.$button-font;
   color: colors.$white;
-}
-
-.link {
-  /* link styles */
-}
-
-.default {
-  /* default size styles */
-}
-
-.sm {
-  /* small size styles */
-}
-
-.lg {
-  /* large size styles */
-}
-
-.icon {
-  /* icon size styles */
 }

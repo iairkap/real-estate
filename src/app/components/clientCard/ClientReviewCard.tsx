@@ -18,7 +18,6 @@ const ClientReviewCard: React.FC<ClientReviewCardProps> = ({
     description,
     location,
     rating,
-    avatar,
 }) => {
     // Crear un array para renderizar las estrellas según el rating
     const renderStars = () => {
