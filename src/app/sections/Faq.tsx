@@ -7,23 +7,28 @@ import Section from "@/app/components/sections/section";
 import { FAQ } from '../constants/constants';
 import Pagination from '../components/pagination/Pagination';
 import { Button } from '@/components/ui/button';
+import useMediaQuery from '@/app/hooks/useMediaQuery';
 
 //eslint-disable-next-line
 interface FAQContainerProps { }
 
 const FAQContainer: React.FC<FAQContainerProps> = () => {
 
+    const isMobile = useMediaQuery("(max-width: 768px)"); // Detecta si la pantalla es móvil
+
+    const cardsPerPage = isMobile ? 1 : 3; // Ajusta la cantidad de cards según el tamaño
+
     const { currentPage, totalPages, nextPage, previousPage } = usePagination({
         total: FAQ.length,
-        cardsPerPage: 3,
+        cardsPerPage: cardsPerPage,
         setCurrentPage: (page) => {
             console.log(page);
         },
     });
 
     const faqsToShow = FAQ.slice(
-        (currentPage - 1) * 3,
-        currentPage * 3
+        (currentPage - 1) * cardsPerPage,
+        currentPage * cardsPerPage
     );
 
 

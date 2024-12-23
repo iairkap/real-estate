@@ -30,3 +30,13 @@
 .buttonContainer {
   max-width: 5.38rem;
 }
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+  .buttonContainer {
+    max-width: 100%;
+    display: flex;
+  }
+}

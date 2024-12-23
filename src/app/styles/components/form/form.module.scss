@@ -188,3 +188,15 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+  .checkboxOptions {
+    display: flex;
+    flex-direction: column;
+  }
+}

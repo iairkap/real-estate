@@ -76,3 +76,19 @@
   flex-direction: column;
   gap: 1.25rem;
 }
+
+@media screen and (max-width: 768pc) {
+  .contentLayout {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    margin-top: 4rem;
+  }
+  .card {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid colors.$gray-60;
+  }
+}

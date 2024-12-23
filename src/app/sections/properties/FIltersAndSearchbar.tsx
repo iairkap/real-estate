@@ -2,7 +2,7 @@ import React from 'react';
 import usePropertyStore from '@/app/store/useFiltersStore';
 import styles from "@/app/styles/components/properties/FiltersAndSearchbar.module.scss";
 import { Button } from '@/components/ui/button';
-
+import useMediaQuery from '@/app/hooks/useMediaQuery';
 import { PROPERTYTYPE, LOCATION, CUBE, MONEY, BEDROOMB } from "@/lib/image";
 import FilterSelect from './Select';
 
@@ -20,6 +20,7 @@ const FiltersAndSearchBar: React.FC<FiltersAndSearchBarProps> = () => {
     const propertyTypes = usePropertyStore((state) => state.propertyTypes);
     const properties = usePropertyStore((state) => state.properties);
 
+    const isMobile = useMediaQuery("(max-width: 768px)"); // Detecta si la pantalla es móvil
     const uniqueLocations = Array.from(
         new Set(properties.map((property) => property.location))
     );
@@ -158,7 +159,9 @@ const FiltersAndSearchBar: React.FC<FiltersAndSearchBarProps> = () => {
                     placeholder="Search by name"
                     onChange={handleSearch}
                 />
-                <Button variant="default">Find Property</Button>
+                <Button variant="default">{isMobile ? <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.5 17.5L13.1694 13.1694M13.1694 13.1694C14.3004 12.0384 15 10.4759 15 8.75C15 5.29822 12.2018 2.5 8.75 2.5C5.29822 2.5 2.5 5.29822 2.5 8.75C2.5 12.2018 5.29822 15 8.75 15C10.4759 15 12.0384 14.3004 13.1694 13.1694Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg> : "Find Property"}</Button>
             </div>
             <div className={styles.selectorsContainer}>
                 <div className={styles.selectorsContainer}>

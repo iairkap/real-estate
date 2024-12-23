@@ -5,16 +5,16 @@ import { cn } from "@/lib/utils"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import useEmblaCarousel from 'embla-carousel-react'
-
-
+import useMediaQuery from "@/app/hooks/useMediaQuery"
 
 interface ImageCarouselProps {
     images: string[]
 }
 export default function ImageCarousel({ images }: ImageCarouselProps) {
 
+    const isMobile = useMediaQuery("(max-width: 768px)"); // Detecta si la pantalla es móvil
+
     const [currentIndex, setCurrentIndex] = React.useState(0)
-    //eslint-disable-next-line
     const [emblaRef, emblaApi] = useEmblaCarousel()
 
     React.useEffect(() => {
@@ -30,13 +30,27 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
     }, [currentIndex])
 
     const handleNext = React.useCallback(() => {
-        if (currentIndex < images.length - 2) {
+        if (currentIndex < images.length - 1) {
             setCurrentIndex(prev => prev + 1)
         }
     }, [currentIndex])
 
     return (
-        <div className="w-full  mx-auto space-y-4">
+        <div className="w-full mx-auto space-y-4">
+            {/* Main Images Display */}
+            <div className={isMobile ? "space-y-4" : "grid grid-cols-2 gap-4"}>
+                {images.slice(currentIndex, currentIndex + (isMobile ? 1 : 2)).map((image, index) => (
+                    <div key={index} className="aspect-[3/2] relative">
+                        <img
+                            src={image}
+                            alt={`Main Image ${currentIndex + index + 1}`}
+                            className="w-full h-full object-cover rounded-lg"
+                        />
+                    </div>
+                ))}
+            </div>
+
+            {/* Thumbnails */}
             <div className="flex gap-2 overflow-x-auto pb-2">
                 {images.map((image, index) => (
                     <button
@@ -58,19 +72,6 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
                             className="w-full h-full object-cover"
                         />
                     </button>
-                ))}
-            </div>
-
-            {/* Main Images Display */}
-            <div className="grid grid-cols-2 gap-4">
-                {images.slice(currentIndex, currentIndex + 2).map((image, index) => (
-                    <div key={index} className="aspect-[3/2] relative">
-                        <img
-                            src={image}
-                            alt={`Main Image ${currentIndex + index + 1}`}
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
                 ))}
             </div>
 
@@ -104,7 +105,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
                     variant="ghost"
                     size="icon"
                     onClick={handleNext}
-                    disabled={currentIndex >= images.length - 2}
+                    disabled={currentIndex >= images.length - 1}
                     className="h-8 w-8"
                 >
                     <ChevronRight className="h-4 w-4" />

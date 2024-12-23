@@ -24,3 +24,9 @@
     font: fonts.$h1-font;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+}

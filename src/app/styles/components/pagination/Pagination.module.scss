@@ -47,3 +47,21 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+  .paginationLayout {
+    align-items: center;
+    color: var(--Grey-60, #999);
+    font-family: Urbanist;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--Absolute-White, #fff);
+    font-family: Urbanist;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 1.3125rem */
+  }
+}

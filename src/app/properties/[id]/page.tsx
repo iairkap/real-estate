@@ -37,7 +37,6 @@ const PropertiesID: React.FC = () => {
                     <Derscription filteredProperties={filteredProperties} />
                     <Inquieres name={filteredProperties[0].name} />
                     <div className={styles.faqContainer}>
-
                         <PricingDetails property={filteredProperties[0]} />
                     </div>
                 </div>

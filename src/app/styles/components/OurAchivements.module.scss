@@ -58,3 +58,12 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: 1rem;
+  }
+  .cardsContainer {
+    flex-direction: column;
+  }
+}

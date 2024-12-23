@@ -40,3 +40,10 @@
 .span {
   color: colors.$gray-60;
 }
+
+@media screen and (max-width: 768px) {
+  .left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

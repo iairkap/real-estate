@@ -20,3 +20,7 @@ $span-strong: 600 1.5rem #{$primary-font};
 
 $h3-font: 600 1.875rem/1.5 $primary-font;
 $h3-secondary: 600 1.625rem/1.5 $primary-font;
+
+@media screen and (max-width: 768px) {
+  $h1-font: 600 1.75rem/1.1;
+}

@@ -111,3 +111,11 @@
   color: colors.$gray-60;
   font: fonts.$span-font;
 }
+
+@media screen and (max-width: 768px) {
+  .cardContainer,
+  .cardContainerb {
+    grid-template-columns: 1fr;
+    min-height: 70dvh;
+  }
+}

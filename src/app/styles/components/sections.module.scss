@@ -41,3 +41,16 @@
   flex-direction: column;
   gap: 0.88rem;
 }
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: 1rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .buttonContainer {
+    display: none;
+  }
+}

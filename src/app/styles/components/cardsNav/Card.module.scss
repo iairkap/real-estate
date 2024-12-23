@@ -17,3 +17,10 @@
     font: fonts.$h2-font;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}

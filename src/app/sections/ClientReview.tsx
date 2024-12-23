@@ -6,20 +6,21 @@ import Pagination from '../components/pagination/Pagination';
 import usePagination from '../hooks/usePagination';
 import ClientReviewCard from '../components/clientCard/ClientReviewCard';
 import styles from "@/app/styles/components/clientCard/ClientReviewCard.module.scss";
+import useMediaQuery from '@/app/hooks/useMediaQuery';
 
-//eslint-disable-next-line
-interface ClientReviewProps {
-    // Define props here
-}
 
-const ClientReview: React.FC<ClientReviewProps> = ({ }) => {
+const ClientReview: React.FC = ({ }) => {
+    const isMobile = useMediaQuery("(max-width: 768px)"); // Detecta si la pantalla es móvil
 
     const clients_reviews = hardcode.clients_reviews;
 
 
+    const cardsPerPage = isMobile ? 1 : 3; // Ajusta la cantidad de cards según el tamaño
+
+
     const { currentPage, totalPages, nextPage, previousPage } = usePagination({
         total: clients_reviews.length,
-        cardsPerPage: 3,
+        cardsPerPage: cardsPerPage,
         setCurrentPage: (page) => {
             console.log(page);
         },
@@ -27,8 +28,8 @@ const ClientReview: React.FC<ClientReviewProps> = ({ }) => {
 
 
     const clientsToShow = clients_reviews.slice(
-        (currentPage - 1) * 3,
-        currentPage * 3
+        (currentPage - 1) * cardsPerPage,
+        currentPage * cardsPerPage
     );
 
 

@@ -40,7 +40,11 @@ const Hero: React.FC<HeroProps> = () => {
                 </div>
                 <div className={styles.cardsContainer}>
                     {cardInformation.map((card, index) => {
-                        return <CardsHero key={index} title={card.title} description={card.description} />
+                        return (
+                            <div key={index} className={styles.child}>
+                                <CardsHero title={card.title} description={card.description} />
+                            </div>
+                        )
                     })}
                 </div>
             </article>

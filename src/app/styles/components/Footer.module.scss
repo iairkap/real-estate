@@ -54,3 +54,20 @@
   flex-direction: column;
   gap: 0.88rem;
 }
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: 1rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .buttonContainer {
+    background-color: red;
+    width: 100%;
+    display: flex;
+  }
+}

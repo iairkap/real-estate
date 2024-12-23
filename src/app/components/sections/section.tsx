@@ -36,7 +36,7 @@ const Section: React.FC<SectionProps> = ({ children, title, description, button 
                 </div>
                 {
                     button &&
-                    <div>
+                    <div className={styles.buttonContainer}>
                         <Button variant='secondary'>{button}</Button>
                     </div>
                 }

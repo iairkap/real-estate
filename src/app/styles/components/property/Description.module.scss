@@ -74,3 +74,20 @@
   border-left: 1px solid var(--Purple-60, #703bf7);
   background: linear-gradient(90deg, #1a1a1a 0%, rgba(26, 26, 26, 0) 100%);
 }
+
+@media screen and (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .descriptionContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .description,
+  .keyFeatures {
+    padding: 2rem 1rem;
+  }
+  .cardContainer:last-child {
+    grid-column: span 2;
+  }
+}

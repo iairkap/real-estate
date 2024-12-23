@@ -7,25 +7,30 @@ import PropertyCard from "@/app/components/propertyCard/PropertyCard";
 import Pagination from '@/app/components/pagination/Pagination';
 import usePagination from "@/app/hooks/usePagination";
 import usePropertyStore from '@/app/store/useFiltersStore';
-//eslint-disable-next-line
-interface PropertiesProps { }
+import useMediaQuery from '@/app/hooks/useMediaQuery';
 
-const Properties: React.FC<PropertiesProps> = () => {
 
+
+
+const Properties: React.FC = () => {
+
+    const isMobile = useMediaQuery("(max-width: 768px)"); // Detecta si la pantalla es móvil
 
     const properties = usePropertyStore((state) => state.filteredProperties);
     const propertiesTypes = usePropertyStore((state) => state.propertyTypes);
+    const cardsPerPage = isMobile ? 1 : 6; // Ajusta la cantidad de cards según el tamaño
+
     const { currentPage, totalPages, nextPage, previousPage } = usePagination({
         total: properties.length,
-        cardsPerPage: 6,
+        cardsPerPage: cardsPerPage,
         setCurrentPage: (page) => {
             console.log(page);
         },
     });
 
     const propertiesToShow = properties.slice(
-        (currentPage - 1) * 6,
-        currentPage * 6
+        (currentPage - 1) * cardsPerPage,
+        currentPage * cardsPerPage
     );
 
     console.log(propertiesToShow);

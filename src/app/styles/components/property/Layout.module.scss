@@ -23,3 +23,13 @@
   margin-top: 3.125rem;
   margin-bottom: 3.125rem;
 }
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+  .faqContainer {
+    margin: 0;
+  }
+}
