@@ -8,12 +8,8 @@ import usePropertyStore from '../store/useFiltersStore';
 import Properties from "@/app/sections/properties/Properties"
 import FormLetsMakeItHappen from '../sections/properties/Form';
 import Section from '../components/sections/section';
-interface AboutProps {
-    // Define props here
-    a?: string;
-}
 
-const About: React.FC<AboutProps> = () => {
+const About: React.FC = () => {
     const loadProperties = usePropertyStore((state) => state.loadProperties);
     const loadPropertyTypes = usePropertyStore((state) => state.loadPropertyTypes);
 
