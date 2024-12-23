@@ -1,13 +1,19 @@
+"use client"
 import React from 'react';
 import styles from "@/app/styles/components/Separacion.module.scss"
+import Image from 'next/image';
+import useAOS from '@/app/hooks/useAOS';
 import { SMART, EFORTLESS, VALUE, DREAM, PHONE, EMAIL, HEADQUARTES, SOCIALMEDIA } from '@/lib/image';
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+
+
+
 interface SeparacionProps {
     contactForm?: boolean
 
 }
 
 const Separacion: React.FC<SeparacionProps> = ({ contactForm = false }) => {
+    useAOS();
 
 
     const cardSeparacion = [
@@ -66,8 +72,11 @@ const Separacion: React.FC<SeparacionProps> = ({ contactForm = false }) => {
             <div className={styles.layout}>
                 {!contactForm &&
                     cardSeparacion.map((item, index) => (
-                        <div className={styles.card} key={index}>
-                            <img src={item.icon} alt="icon" />
+                        <div className={styles.card} key={index} data-aos="fade"
+                            data-aos-offset="100"
+                            data-aos-delay={index * 100}
+                            data-aos-easing="ease-in-sine">
+                            <Image src={item.icon} alt="icon" width={35} height={35} />
                             <span>{item.description}</span>
                         </div>
                     ))}

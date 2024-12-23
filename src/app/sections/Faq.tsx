@@ -8,11 +8,15 @@ import { FAQ } from '../constants/constants';
 import Pagination from '../components/pagination/Pagination';
 import { Button } from '@/components/ui/button';
 import useMediaQuery from '@/app/hooks/useMediaQuery';
+import useAOS from '../hooks/useAOS';
+
 
 //eslint-disable-next-line
 interface FAQContainerProps { }
 
 const FAQContainer: React.FC<FAQContainerProps> = () => {
+    useAOS();
+
 
     const isMobile = useMediaQuery("(max-width: 768px)"); // Detecta si la pantalla es móvil
 
@@ -41,7 +45,8 @@ const FAQContainer: React.FC<FAQContainerProps> = () => {
             <div className={styles.cardContainer}>
                 {faqsToShow.map((faq, index) => {
                     return (
-                        <div className={styles.card} key={index}>
+                        <div className={styles.card} key={index} data-aos="fade" data-aos-delay={index * 100}
+                        >
                             <h3 className={styles.title}>{faq.question}</h3>
                             <p>{faq.sub}</p>
                             <div className={styles.buttonContainer}>

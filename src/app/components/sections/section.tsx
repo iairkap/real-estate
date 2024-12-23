@@ -1,7 +1,10 @@
+"use client"
 import React from 'react';
 import styles from "@/app/styles/components/sections.module.scss"
 import { STAR } from '@/lib/image';
 import { Button } from '@/components/ui/button';
+import useAOS from '@/app/hooks/useAOS';
+import Image from 'next/image';
 
 interface SectionProps {
     children: React.ReactNode;
@@ -11,23 +14,17 @@ interface SectionProps {
 }
 
 
-/*     <svg
-              width="18"
-              height="18"
-              className={styles.icon}
-              onClick={handleClickBack}
-            >
-              <use href={CHEVRON_RIGHT}></use>
-            </svg>
-             */
+
 
 const Section: React.FC<SectionProps> = ({ children, title, description, button }) => {
+    useAOS();
+
     return (
-        <div className={styles.layout}>
+        <div className={styles.layout} data-aos="fade-up">
             <div className={styles.icon}>
-                <img src={STAR} alt="star" />
-                <img src={STAR} alt="star" className={styles.opacity} />
-                <img src={STAR} alt="star" className={styles.opacityb} />
+                <Image src={STAR} alt="star" width={30} height={30} />
+                <Image src={STAR} alt="star" className={styles.opacity} width={30} height={30} />
+                <Image src={STAR} alt="star" className={styles.opacityb} width={30} height={30} />
             </div>
             <div className={styles.content}>
                 <div className={styles.text}>

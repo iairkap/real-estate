@@ -11,6 +11,8 @@ interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, nextPage, previousPage }) => {
+
+
     return (
         <article className={styles.paginationLayout}>
             <div className={styles.numeration}>
@@ -42,3 +44,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, nextPa
 }
 
 export default Pagination;
+
+
+/*   transform={isHovered ? "translateY(-5px)" : "translateY(0px)"}
+        transition="transform 300ms ease-out"
+        
+        */

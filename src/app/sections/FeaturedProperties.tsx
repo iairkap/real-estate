@@ -8,10 +8,11 @@ import PropertyCard from "@/app/components/propertyCard/PropertyCard";
 import Pagination from '../components/pagination/Pagination';
 import usePagination from "@/app/hooks/usePagination";
 import useMediaQuery from '../hooks/useMediaQuery';
-//eslint-disable-next-line
-interface FeaturedPropertiesProps { }
+import useAOS from '../hooks/useAOS';
 
-const FeaturedProperties: React.FC<FeaturedPropertiesProps> = () => {
+const FeaturedProperties: React.FC = () => {
+
+    useAOS();
     const isMobile = useMediaQuery("(max-width: 768px)"); // Detecta si la pantalla es móvil
     const properties_types = hardcode.properties_types;
     const properties = hardcode.properties;
@@ -41,18 +42,20 @@ const FeaturedProperties: React.FC<FeaturedPropertiesProps> = () => {
                     const propertyType = properties_types.find(pt => pt.id === property.type)?.name || "Unknown";
 
                     return (
-                        <PropertyCard
-                            key={index}
-                            id={property.id}
-                            title={property.name}
-                            images={property.images[0]}
-                            description={property.description}
-                            type={propertyType}
-                            bedroom={property.bedrooms}
-                            price={property.price}
-                            bathroom={property.bathrooms}
-                            showChips={true}
-                        />
+                        <div key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
+                            <PropertyCard
+                                key={index}
+                                id={property.id}
+                                title={property.name}
+                                images={property.images[0]}
+                                description={property.description}
+                                type={propertyType}
+                                bedroom={property.bedrooms}
+                                price={property.price}
+                                bathroom={property.bathrooms}
+                                showChips={true}
+                            />
+                        </div>
                     );
                 })}
             </div>
