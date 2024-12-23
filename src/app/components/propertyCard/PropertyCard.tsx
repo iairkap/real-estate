@@ -61,7 +61,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ title, description, type, b
                     <span className={styles.sub}>Price: </span>
                     <span className={styles.price}>${price}</span>
                 </div>
-                <Button variant='default'>View Property Details</Button>
+                <Button variant='default' size='sm'>View Property Details</Button>
             </div>
         </div>
     );

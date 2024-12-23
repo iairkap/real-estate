@@ -14,10 +14,14 @@
 }
 
 .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.buttonContainer {
   display: flex;
-  flex-direction: row;
-  gap: 12.5rem;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .h2 {

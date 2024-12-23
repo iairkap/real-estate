@@ -53,3 +53,98 @@
     display: none;
   }
 }
+
+.navBarMobile {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  .btnMenu {
+    width: 32px;
+    height: 32px;
+    padding: 7px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    .menuLine {
+      z-index: 10;
+      background: white;
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      transition: transform 0.5s;
+    }
+    &.isOpen {
+      .menuLine {
+        position: fixed;
+        top: 35px;
+        &:first-child {
+          transform: rotate(45deg);
+          width: 22px;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+          width: 22px;
+        }
+      }
+    }
+  }
+}
+
+.menuContent {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  background: colors.$gray-10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  &.isOpen {
+    transform: translateX(0%);
+  }
+  .menuTitle {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .btnCalendar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    .icon {
+    }
+  }
+  .infoSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    .infoLink {
+    }
+  }
+  .btnActions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 200;
+  }
+
+  @media (height >= 520px) {
+    position: fixed;
+  }
+}
