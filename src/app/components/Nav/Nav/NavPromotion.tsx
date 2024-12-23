@@ -1,29 +1,51 @@
-import React from 'react';
-import styles from "@/app/styles/components/Nav/Nav.module.scss"
-import Image from 'next/image';
+"use client"
+import React, { useState } from "react";
+import styles from "@/app/styles/components/Nav/Nav.module.scss";
+import Image from "next/image";
+import Link from "next/link";
 
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface NavPromotionProps {
 
-}
 
-const NavPromotion: React.FC<NavPromotionProps> = () => {
+const NavPromotion: React.FC = () => {
+    const [isClosed, setIsClosed] = useState(false);
+
+
+
+    if (isClosed) return null;
+
+    console.log("isClosed", isClosed);
+
     return (
         <main className={styles.promotion}>
+
             <div className={styles.promotionContainer}>
-                <div className={styles.background}>
-                    <Image src="/background.png" alt="Estatein Promotion" layout="fill" objectFit="cover" />
-                </div>
+                {/* Asegúrate de que este contenedor tenga `position: relative` */}
+                <Image
+                    src="/icons/background.svg"
+                    alt="background"
+                    layout="fill"
+                    objectFit="cover"
+                />
             </div>
-            <span className={styles.promotionText}>
-                ✨Discover Your Dream Property with Estatein
-            </span>
-            <span className={styles.underline}>
-                Learn More
-            </span>
+            <div>
+                <span className={styles.promotionText}>
+                    ✨ Discover Your Dream Property with Estatein{" "}
+                    <Link href="/services">
+                        <span className={styles.underline}>{`Learn More`}</span>
+                    </Link>
+                </span>
+            </div>
+            <button
+                onClick={() => { setIsClosed(true) }}
+                className={styles.closeButton}
+                aria-label="Close promotion"
+            >
+                ✕
+            </button>
+
         </main>
     );
-}
+};
 
 export default NavPromotion;
