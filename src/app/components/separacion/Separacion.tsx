@@ -82,7 +82,9 @@ const Separacion: React.FC<SeparacionProps> = ({ contactForm = false }) => {
                     ))}
                 {contactForm &&
                     cardSeparacionContactForm.map((item, index) => (
-                        <div className={styles.card} key={index} onClick={item.onClick}>
+                        <div className={styles.card} key={index} onClick={item.onClick} data-aos-offset="100"
+                            data-aos-delay={index * 100}
+                            data-aos-easing="ease-in-sine" >
                             <div className={styles.arrowPointng}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                                     <path d="M6.375 27.625L27.625 6.375M27.625 6.375L11.6875 6.375M27.625 6.375V22.3125" stroke="#4D4D4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "@/app/styles/components/OurExperience.module.scss";
 import { STAR } from "@/lib/image";
+import useAOS from '@/app/hooks/useAOS';
 
 //eslint-disable-next-line
 interface OurExperienceProps {
@@ -8,6 +9,8 @@ interface OurExperienceProps {
 }
 
 const OurExperience: React.FC<OurExperienceProps> = () => {
+
+    useAOS();
 
 
     const steps = [
@@ -45,7 +48,7 @@ const OurExperience: React.FC<OurExperienceProps> = () => {
     ]
 
     return (
-        <article className={styles.layout}>
+        <article className={styles.layout} data-aos="fade-up">
             <div>
                 <div className={styles.icon}>
                     <img src={STAR} alt="star" />
@@ -57,7 +60,7 @@ const OurExperience: React.FC<OurExperienceProps> = () => {
             </div>
             <div className={styles.cardsContainer}>
                 {steps.map((card) => (
-                    <div key={card.id} className={styles.card}>
+                    <div key={card.id} className={styles.card} data-aos="fade-in-right" data-aos-delay={card.id * 100} data-aos-easing="ease-in-out">
                         <div className={styles.step}>
                             <span>Step {card.id}</span>
                         </div>

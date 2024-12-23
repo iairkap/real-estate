@@ -42,3 +42,20 @@
   font: fonts.$span-font;
   color: colors.$gray-60;
 }
+
+@media screen and (max-width: 768px) {
+  .gridLayout {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .textContainer {
+    height: fit-content;
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+  .gridItem {
+    width: 100%;
+    height: 100%;
+  }
+}

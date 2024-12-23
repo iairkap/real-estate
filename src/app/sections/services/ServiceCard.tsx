@@ -1,9 +1,11 @@
+"use client";
 import React from 'react';
 import Section from '@/app/components/sections/section';
 import styles from "@/app/sections/services/ServiceCard.module.scss";
 import Card from "@/app/sections/services/Card"
 import { gridPropertyValue } from '@/app/constants/constants';
 import Image from 'next/image';
+import useAOS from '@/app/hooks/useAOS';
 //eslint-disable-next-line
 interface ServiceCardProps {
     title: string
@@ -13,7 +15,8 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description }) => {
 
-    console.log(title)
+    useAOS();
+
 
     return (
         <Section title={title} description={description}>
@@ -22,18 +25,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description }) => {
                     gridPropertyValue
                         .filter((card) => card.id <= 4)
                         .map((card) => (
-                            <Card key={card.id} icon={card.icon} title={card.title} span={card.span} />
+                            <div key={card.id} data-aos="fade-up" data-aos-delay={card.id * 100}>
+                                <Card key={card.id} icon={card.icon} title={card.title} span={card.span} />
+                            </div>
                         ))
                 ) : (
                     gridPropertyValue
                         .filter((card) => card.id > 4)
                         .map((card) => (
-                            <Card key={card.id} icon={card.icon} title={card.title} span={card.span} />
+                            <div key={card.id} data-aos="fade-up" data-aos-delay={card.id * 100}>
+
+                                <Card key={card.id} icon={card.icon} title={card.title} span={card.span} />
+                            </div>
                         ))
                 )
 
                 }
-                <div className={styles.card}>
+                <div className={styles.card} data-aos="fade-up" data-aos-delay={500}>
                     <div className={styles.backgroundContainer}>
                         <Image src={"/icons/background.svg"} alt="background" layout='fill' objectFit='cover' />
                     </div>

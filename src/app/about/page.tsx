@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Hero from "@/app/sections/about/Hero";
 import OurValues from '../sections/about/OurValues';

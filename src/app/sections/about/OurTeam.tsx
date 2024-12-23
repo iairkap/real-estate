@@ -1,16 +1,14 @@
 import React from 'react';
 import styles from "@/app/styles/components/OurTeam.module.scss";
 import { STAR, MESSAGE } from "@/lib/image";
+import useAOS from '@/app/hooks/useAOS';
 
 
 
 
-//eslint-disable-next-line
-interface OurTeamProps {
-    // Define props here
-}
+const OurTeam: React.FC = () => {
 
-const OurTeam: React.FC<OurTeamProps> = () => {
+    useAOS();
     const team = [
         {
             id: 1,
@@ -38,7 +36,7 @@ const OurTeam: React.FC<OurTeamProps> = () => {
         }
     ]
     return (
-        <article className={styles.layout}>
+        <article className={styles.layout} data-aos="fade-up">
             <div>
                 <div className={styles.icon}>
                     <img src={STAR} alt="star" />
@@ -53,7 +51,7 @@ const OurTeam: React.FC<OurTeamProps> = () => {
                 {
                     team.map((item) => {
                         return (
-                            <div className={styles.card} key={item.id}>
+                            <div className={styles.card} key={item.id} data-aos="fade-out-right" data-aos-delay={item.id * 100}>
                                 <img src={item.picture} alt="picture" />
                                 <div className={styles.infoContainer}>
                                     <h4 className={styles.name}>{item.name}</h4>

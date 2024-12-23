@@ -7,12 +7,10 @@ import D from "@/../public/contactd.png"
 import C from "@/../public/contactc.png"
 import E from "@/../public/contacte.png"
 import F from "@/../public/contactf.png"
-//eslint-disable-next-line
-interface AboutUsProps {
-    // Define props here
-}
+import useAOS from '@/app/hooks/useAOS';
 
-const AboutUs: React.FC<AboutUsProps> = () => {
+const AboutUs: React.FC = () => {
+    useAOS();
 
     const gridPicture = [
         { id: 7, image: F, gridColumnSpaces: 2 },
@@ -26,9 +24,9 @@ const AboutUs: React.FC<AboutUsProps> = () => {
 
     return (
         <main className={styles.gridLayout}>
-            {gridPicture.map((item) => {
+            {gridPicture.map((item, index) => {
                 return (
-                    <div key={item.id} className={`${styles.gridItem} ${styles[`gridItem${item.gridColumnSpaces}`]}`}>
+                    <div key={item.id} className={`${styles.gridItem} ${styles[`gridItem${item.gridColumnSpaces}`]}`} data-aos="zoom-in" data-aos-delay={index * 100}>
                         {item.image ? (
                             <Image src={item.image} alt={`Image ${item.id}`} layout="fill" objectFit="cover" />
                         ) : (

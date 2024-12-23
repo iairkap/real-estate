@@ -1,8 +1,11 @@
+"use client";
+
 import React from 'react';
 import { TRUST, EXCELLNCE, CLIENTCENTRIC } from '@/lib/image';
 import styles from '@/app/styles/components/OurValues.module.scss';
 import OurValuesCard from '@/app/components/OurValuesCard/OurValuesCard';
 import { STAR } from '@/lib/image';
+import useAOS from '@/app/hooks/useAOS';
 
 
 
@@ -16,6 +19,7 @@ interface OurValuesProps {
 
 
 const OurValues: React.FC<OurValuesProps> = () => {
+    useAOS();
 
     const ourValues = [
         { id: 1, title: "Trust", description: "Trust is the cornerstone of every successful real estate transaction.", useIcon: TRUST },
@@ -28,7 +32,7 @@ const OurValues: React.FC<OurValuesProps> = () => {
 
 
     return (
-        <section className={styles.contentLayout}>
+        <section className={styles.contentLayout} data-aos="fade-up">
             <article className={styles.left}>
                 <div className={styles.icon}>
                     <img src={STAR} alt="star" />
@@ -40,7 +44,9 @@ const OurValues: React.FC<OurValuesProps> = () => {
             </article>
             <article className={styles.cardsContainer}>
                 {ourValues.map((card) => {
-                    return <OurValuesCard key={card.id} title={card.title} description={card.description} useIcon={card.useIcon} />
+                    return <div key={card.id} data-aos="fade-in-right" data-aos-delay={card.id * 100} data-aos-easing="ease-in-out">
+                        <OurValuesCard key={card.id} title={card.title} description={card.description} useIcon={card.useIcon} />
+                    </div>
                 })}
             </article>
         </section>

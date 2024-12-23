@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/app/styles/components/OurAchivements.module.scss';
 import { STAR } from '@/lib/image';
-
+import useAOS from '@/app/hooks/useAOS';
 //eslint-disable-next-line
 interface OurAchivementsProps {
     // Define props here
@@ -9,6 +9,7 @@ interface OurAchivementsProps {
 
 const OurAchivements: React.FC<OurAchivementsProps> = () => {
 
+    useAOS();
 
     const ourAchivementes = [
         {
@@ -31,7 +32,7 @@ const OurAchivements: React.FC<OurAchivementsProps> = () => {
     ]
 
     return (
-        <article className={styles.layout}>
+        <article className={styles.layout} data-aos="fade-up">
             <div>
                 <div className={styles.icon}>
                     <img src={STAR} alt="star" />
@@ -44,7 +45,7 @@ const OurAchivements: React.FC<OurAchivementsProps> = () => {
             <div className={styles.cardsContainer}>
                 {ourAchivementes.map((card) => {
                     return (
-                        <article key={card.id} className={styles.card}>
+                        <article key={card.id} className={styles.card} data-aos="fade-up">
                             <h3>{card.title}</h3>
                             <p>{card.description}</p>
                         </article>

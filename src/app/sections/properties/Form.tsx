@@ -1,7 +1,9 @@
+"use client"
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { formInputsProperties } from '@/app/constants/constants';
 import styles from '@/app/styles/components/form/form.module.scss';
+import useAOS from '@/app/hooks/useAOS';
 
 interface FormLetsMakeItHappenProps {
     //eslint-disable-next-line
@@ -10,10 +12,11 @@ interface FormLetsMakeItHappenProps {
 
 const FormLetsMakeItHappen: React.FC<FormLetsMakeItHappenProps> = ({ onSubmit }) => {
     const { register, handleSubmit } = useForm();
+    useAOS();
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.form} data-aos="fade-up">
                 {formInputsProperties.map((input) => {
                     const gridClass = styles[`grid-size-${input.gridsize}`]; // Clase dinámica basada en gridsize
                     switch (input.type) {

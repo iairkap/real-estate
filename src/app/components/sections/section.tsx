@@ -13,9 +13,6 @@ interface SectionProps {
     button?: string
 }
 
-
-
-
 const Section: React.FC<SectionProps> = ({ children, title, description, button }) => {
     useAOS();
 
